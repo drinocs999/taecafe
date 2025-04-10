@@ -1,0 +1,287 @@
+:root {
+    --text: #362222;
+    --background: #fee9ec;
+    --navbar-background: #bc2c00;
+    --primary: #B3541E;
+    --secondary: #bc2c00;
+    --accent: #dcc7aa;
+    --card-background:#bc764d;
+}
+
+/*/ Global style /*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+}
+
+body {
+    display: grid;
+    max-width: 100vw;
+    height: 250vh;
+    grid-template-areas: 
+    "navbar"
+    "content"
+    "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 0.08fr 1fr 0.12fr;
+    overflow-x: hidden;
+    background-image: url(/assets/images/triple-coffee-mugs.jpg);
+    background-size: cover;
+}
+
+/*/ About us Page /*/
+
+.body-aboutus {
+    display: flex;
+    flex-direction: column;
+    grid-area: content;
+    width: 95%;
+    height: 100%;
+    border-radius: 20px;
+    place-self: center;
+}
+
+.body-aboutus>*{
+    margin-bottom: 20px;
+}
+
+
+.nav-bar {
+    position:fixed;
+    grid-area: navbar;
+    width: 100%;
+    height: 9%;
+    background-color: var(--navbar-background);
+    border-radius: 0% 0% 50% 50% / 0% 0% 500% 500%;
+    z-index: 1000;
+    justify-items: center;
+}
+
+.nav-bar nav{
+    display: flex;
+    justify-content: center;
+    color: white;
+
+}
+
+.nav-bar, .nav-bar a, .nav-bar li {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    cursor: pointer;
+    justify-content: space-evenly;
+    padding: 5px 5px 5px 0;
+}
+
+.nav-bar a {
+    padding: 0 0 0 80px;
+}
+
+.body-history {
+    display: flex;
+    width: 100%;
+    height: 35%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.body-team {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.history-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.history-text p{
+    width: 50%;
+    text-align: justify;
+    padding: 10px;
+    font-weight: 300;
+    z-index: 500;
+}
+
+.history-image {
+    width: 350px;
+    height: 300px;
+    border-radius: 70% 50% 50% 50% / 60% 80% 50% 40%;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--navbar-background);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    padding:10px;
+}
+
+.footer-logo {
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    color: var(--accent);
+    border-right: 1px solid var(--accent);
+}
+
+.footer-logo p {
+    color: var(--accent);
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 20%;
+    justify-content: space-evenly;
+    padding: 5px 5px 5px 0;
+    margin-top: 120px;
+}
+
+.footer-links li, .footer-links a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: small;
+}
+
+.footer-links a {
+    border-left: 1px solid var(--accent);
+    padding-left: 20px;
+}
+
+.footer-links button {
+    background-color: var(--card-background);
+    border: none;
+}
+
+.nav-bar li:hover {
+    color: var(--text);
+}
+
+.nav-bar li a:hover::after {
+    width: 100%;
+  }
+
+.nav-bar-logo-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar-logo {
+    max-width: 13%;
+    grid-area:navbar;
+    background-color: var(--navbar-background);
+    border-radius: 50px;
+    padding:10px;
+    margin: -3% 0 0 43%;
+}
+
+
+.team-card-members {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    margin-bottom:20px;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 5px 0 5px;
+    background-color: var(--card-background);
+    color: var(--background);
+}
+
+.team-card > * {
+    padding: 5px 5px 0 5px;
+}
+.body-team .team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    border: double 5px var(--background);
+}
+
+.body-team .team-card p {
+    background-color: #dcc7aa;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.team-card:hover {
+    scale: 0.97;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    background-color: var(--accent);
+}
+
+.team-card:hover>*{
+    color: var(--text);
+    
+}
+
+.team-card:hover> p{
+    background-color: var(--card-background);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*/ Promotion Page/*/
+
+.body-promotion {
+    background-color: var(--background);
+}

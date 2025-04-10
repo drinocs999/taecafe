@@ -1,0 +1,7 @@
+references:
+
+triple coffee: https://unsplash.com/photos/three-person-holding-beverage-cups-6VhPY27jdps
+
+logo-icon: https://www.flaticon.com/free-icon/tea_4363404?related_id=4363425&origin=search
+
+triple coffee mugs: https://unsplash.com/photos/shallow-focus-photography-of-coffee-late-in-mug-on-table-zUNs99PGDg0

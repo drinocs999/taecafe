@@ -1,0 +1,55 @@
+:root {
+    --text: #5c4033;
+    --background: #f8f8f0;
+    --navbar-background: #758c74;
+    --primary: #6b8e23;
+    --secondary: #a2c2a1;
+    --accent: #dcc7aa;
+}
+
+/*/ Global style /*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: var(--text);
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "menu content"
+        "menu content"
+        "footer footer";
+    grid-template-columns: 0.2fr 0.8fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    height: 200vh;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+/*/ About us Page /*/
+
+.body-aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    grid-area: content;
+    height: 100%;
+    background-color: var(--background);
+}
+
+.nav-bar {
+    grid-area: menu;
+    width: 100%;
+    background-color: var(--navbar-background);
+}
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+}
