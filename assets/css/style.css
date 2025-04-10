@@ -28,7 +28,7 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 0.08fr 1fr 0.12fr;
     overflow-x: hidden;
-    background-image: url(''../images/triple-coffee-mugs.jpg'');
+    background-image: url('../images/triple-coffee-mugs.jpg');
     background-size: cover;
 }
 
