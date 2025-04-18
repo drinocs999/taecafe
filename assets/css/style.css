@@ -785,28 +785,28 @@ text-align: center;
 .instruction-text:nth-child(1) {
 position: relative;
 filter: grayscale(1);
-background-image: url(../images/table-window.jpg);
+background-image: url(/assets/images/table-window.jpg);
 background-size: cover;
 }
 
 .instruction-text:nth-child(2) {
 position: relative;
 filter: grayscale(1);
-background-image: url(../images/three-shots.jpg);
+background-image: url(/assets/images/three-shots.jpg);
 background-size: cover;
 }
 
 .instruction-text:nth-child(3) {
 position: relative;
 filter: grayscale(1);
-background-image: url(../images/coffee-friends.jpg);
+background-image: url(/assets/images/coffee-friends.jpg);
 background-size: cover;
 }
 
 .instruction-text:nth-child(4) {
 position: relative;
 filter: grayscale(1);
-background-image: url(../images/coffee-neon.jpg);
+background-image: url(/assets/images/coffee-neon.jpg);
 background-size: cover;
 }
 
@@ -976,7 +976,7 @@ filter: blur(0.5px);
   border-radius: 20px;
   margin: 0 0 0 0;
   padding: 20px;
-  background-image: url(../images/coffee-banner-2.jpg);
+  background-image: url(/assets/images/coffee-banner-2.jpg);
   background-size: cover;
   background-position: center;
   transition: background-size 5s ease-in-out;
@@ -1078,7 +1078,7 @@ animation-delay: 6s;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 75%;
   margin-bottom:20px;
 }
 
@@ -1086,11 +1086,11 @@ animation-delay: 6s;
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  margin: 0 5px 0 5px;
+  margin: 10px 5px 0 5px;
   background-color: var(--card-background);
   color: var(--background);
 }
@@ -1110,7 +1110,8 @@ color: var(--accent);
 
 .body-team .team-card p {
   background-color: #dcc7aa;
-  height: 58%;
+  height: auto;
+  font-size: 0.8rem;
   border-radius: 0 0 20px 20px;
   margin-bottom: 10px;
   padding: 10px;
@@ -1463,14 +1464,15 @@ color: var(--accent);
 
 /*/MEDIA QUERY/*/
 
+@media (min-width:0px) and (max-width:900px) {
+  
+  body {
+    min-height: 100vh;
+}
+  
+  /*/ Navbar style /*/
 
-/*/Small, medium and large smartphones, and Tablets/*/
-
-@media (min-width:0px) and (max-width:769px) {
-
-    /*/ Navbar style /*/
-
-   .mobile-nav-bar {
+  .mobile-nav-bar {
     display: flex;
     width: 90%;
     border-radius: 50px;
@@ -1507,6 +1509,13 @@ color: var(--accent);
   .footer-logo {
     width: 50%;
   }
+
+}
+
+
+/*/Small, medium and large smartphones, and Tablets/*/
+
+@media (min-width:0px) and (max-width:769px) {
 
   /*/About us style /*/
 
@@ -1554,10 +1563,14 @@ color: var(--accent);
 
   /*/ Promo Page /*/
 
+  .body-promotion {
+    
+  }
+  
   .promo-container-info {
     flex-direction: column-reverse;
     width: 100%;
-    height: 35%;
+    height: 33%;
     background-color: var(--card-background);
     margin: 50px 0 30px 0;
     background-image: url(../images/coffee-light-3.jpg);
@@ -1566,6 +1579,21 @@ color: var(--accent);
     background-repeat: repeat;
   
   }
+
+  .game-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 33%;
+    width: 100%;
+  }
+
+  .game-container {
+    width: 98%;
+    height: 33%;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+
   
   .promo-banner {
     overflow-x: hidden;
@@ -1605,12 +1633,6 @@ color: var(--accent);
     display: none;
   }
   
-  .game-info {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 45%;
-    width: 100%;
-  }
 
   .game-title {
     display: none;
@@ -1630,18 +1652,12 @@ color: var(--accent);
       "game";
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 0.3fr 0.4fr;
-    gap: 0.1rem;
     place-items: center;
     background-color: var(--card-background);
   }
 
   .promo-container-game {
     grid-area: game;
-  }
-
-  .game-container {
-    width: 100%;
-    height: 100%;
   }
 
   .game-container::before {
@@ -1652,15 +1668,15 @@ color: var(--accent);
   }
   .game-container p {
     width: 22rem;
-    font-size: 0.8rem;
+    font-size: 10pt;
     grid-area: text;
     border-radius: 200px;
-    padding:1rem;
+    padding:0.2rem;
     left:0;
   }
 
   .game-text { 
-    width: 60%;
+    width: 100%;
   }
 
   .promo-container-game {
@@ -1780,6 +1796,10 @@ color: var(--accent);
   
 }
 
+@media (min-width: 769px) and (max-width:900px) {
+
+}
+
 /*/ Tablets - Landscape /*/
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1832,6 +1852,7 @@ color: var(--accent);
 
 /*/About us style /*/
 
+
 .history-text {
   width: 100%;
   max-height: 100%;
@@ -1855,79 +1876,4 @@ color: var(--accent);
   height: 100%;
 }
 
-}
-@media (min-width: 1024px) and (max-width:3000px) {
-
-  /*/ Navbar style /*/
-
- .mobile-nav-bar {
-  display: none;
-}
-
-.nav-bar,.nav-bar-logo {
-  visibility: visible;
-}
-
-/*/ Footer style /*/
-
-.footer-links {
-  width: 50%;
-  height: 100%;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 0;
-}
-
-.footer-links li, .footer-links a {
-  width: 100%;
-  text-align: left;
-}
-
-.footer-logo {
-  width: 50%;
-}
-
-/*/About us style /*/
-
-.body-aboutus  {
-  width: 90%;
-  height: 100%;
-}
-
-.history-text {
-  width: 60%;
-  max-height: 100%;
-}
-.history-text p {
-  font-size: (1rem, 2.5vw, 2rem)
-}
-
-.about-us-banner {
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-.body-team {
-  width: 100%;
-  max-height: 100%;
-}
-
-
-.team-card-members {
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-.team-card {
-  flex-direction: column;
-  width: 100%;
-  max-height: 100%;
-  margin-bottom: 10px;
-}
-
-.body-team .team-card p {
-  font-size: 2.5vh;
-  height: 60%;
-}
 }
