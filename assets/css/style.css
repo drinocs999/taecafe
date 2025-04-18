@@ -289,27 +289,23 @@ body {
 }
 
 .home-slides {
-  display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease;
-
 }
 
 .home-slide {
-  flex: 0 0 100%;
-  min-width: 100%;
-  height: auto;
   display: none;
-  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .home-slide img, 
 .home-slides img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-slide.active {
