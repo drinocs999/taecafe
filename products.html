@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <title>Our Products</title>
+</head>
+
+<body>
+	<div class="nav-bar">
+        <ul class="nav justify-content-end" id="web-navbar">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Our Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="promotion.html">Get A Discount</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">Our History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>		
+        <div class="nav-bar-logo-section">
+            <img class="nav-bar-logo" src="/assets/images/logo-icon.png" alt="This is the logo of the café">
+        </div>
+      </div>
+      <div class="mobile-nav-bar">
+      <nav class="navbar bg-body-tertiary fixed-top">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="products.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promotion.html">Get A Discount</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">Our History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </nav>
+      </div> 
+	<div class="body-ourproducts Ourproducts">	
+    <div class="container my-5">
+        <h2 class="text-center mb-4"><b>Menu</b></h2>
+
+        <!-- Tabs for switching between Food, Coffee, Iced Coffee, Smoothie, and Tea -->
+        <div class="row mb-3 nav-menu container">
+            <div class="col-12 d-flex justify-content-around">
+                <ul class="nav nav-pills" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="food-tab" data-bs-toggle="pill" href="#food" role="tab" aria-controls="food" aria-selected="true">Food</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="coffee-tab" data-bs-toggle="pill" href="#coffee" role="tab" aria-controls="coffee" aria-selected="false">Coffee</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="iced-coffee-tab" data-bs-toggle="pill" href="#iced-coffee" role="tab" aria-controls="iced-coffee" aria-selected="false">Iced Coffee</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="smoothie-tab" data-bs-toggle="pill" href="#smoothie" role="tab" aria-controls="smoothie" aria-selected="false">Smoothie</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="tea-tab" data-bs-toggle="pill" href="#tea" role="tab" aria-controls="tea" aria-selected="false">Tea</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content" id="productTabContent">
+            <!-- Food Tab -->
+            <div class="tab-pane fade show active" id="food" role="tabpanel" aria-labelledby="food-tab">
+                <div class="row g-4">
+                    <!-- Pizza Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Pizza.jpg" alt="Pizza" class="card-img-top"> <!--https://unsplash.com/s/photos/Pizza-->
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza</h5>
+                                <p class="card-text">Thin crust, rich tomato sauce, and gooey melted cheese—just right as a warm snack with your favorite drink.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Burger Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Burger.jpg" alt="Burger" class="card-img-top"> <!--https://unsplash.com/s/photos/Burger-->
+                            <div class="card-body">
+                                <h5 class="card-title">Burger</h5>
+                                <p class="card-text">A soft bun with a juicy patty and fresh toppings. A cute and satisfying mini meal for your tea time or any drink.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+					<!-- Pasta  Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Pasta.jpg" alt="Pasta" class="card-img-top"> <!--https://unsplash.com/s/photos/Pasta-->
+                            <div class="card-body">
+                                <h5 class="card-title">Pasta</h5>
+                                <p class="card-text">Delicious pasta tossed in creamy sauce, finished with herbs and cheese. Comfort food that warms your soul.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Salad  Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Salad.jpg" alt="Salad" class="card-img-top"> <!--https://unsplash.com/s/photos/Salad-->
+                            <div class="card-body">
+                                <h5 class="card-title">Salad</h5>
+                                <p class="card-text">A refreshing mix of crisp lettuce, cherry tomatoes, cucumbers, and house dressing. Great with fruit drinks or tea!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Chicken Wings  Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/ChickenWings.jpg" alt="Chicken Wings" class="card-img-top"> <!--https://unsplash.com/s/photos/hicken Wings-->
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Wings</h5>
+                                <p class="card-text">Crispy outside, tender inside—our wings are fried to golden perfection and full of flavor.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Fries Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Fries.jpg" alt="Fries" class="card-img-top"> <!--https://unsplash.com/s/photos/Fries-->
+                            <div class="card-body">
+                                <h5 class="card-title">Fries</h5>
+                                <p class="card-text">Golden shoestring fries served hot—perfect for snacking while sipping on your favorite beverage.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Cake Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Cake.jpg" alt="Cake" class="card-img-top"> <!--https://unsplash.com/s/photos/Cake-->
+                            <div class="card-body">
+                                <h5 class="card-title">Cake</h5>
+                                <p class="card-text">Fluffy cupcakes with a creamy topping, perfect for a sweet bite alongside your drink.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$15.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+
+            <!-- Coffee Tab -->
+            <div class="tab-pane fade" id="coffee" role="tabpanel" aria-labelledby="coffee-tab">
+                <div class="row g-4">
+                    <!-- Cappuccino Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Cappuccino.jpg" alt="Cappuccino" class="card-img-top"> <!--https://unsplash.com/s/photos/Cappuccino-->
+                            <div class="card-body">
+                                <h5 class="card-title">Cappuccino</h5>
+                                <p class="card-text">A classic Italian coffee made with equal parts espresso, steamed milk, and milk foam. Rich in taste and topped with a creamy, airy layer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+					 <!-- Flat White Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/FlatWhite.jpg" alt="Flat White" class="card-img-top"> <!--https://unsplash.com/s/photos/Flat White-->
+                            <div class="card-body">
+                                <h5 class="card-title">Flat White</h5>
+                                <p class="card-text">Originating from Australia and New Zealand, it's made with espresso and micro-foamed milk. Creamier than a cappuccino, but less foamy.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Macchiato Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Macchiato.jpg" alt="Macchiato" class="card-img-top"> <!--https://unsplash.com/s/photos/Macchiato-->
+                            <div class="card-body">
+                                <h5 class="card-title">Macchiato</h5>
+                                <p class="card-text">An intense shot of espresso "stained" with a spoonful of milk foam. Small, strong, and aromatic.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Mocha Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Mocha.jpg" alt="Mocha" class="card-img-top"> <!--https://unsplash.com/s/photos/Mocha-->
+                            <div class="card-body">
+                                <h5 class="card-title">Mocha</h5>
+                                <p class="card-text">A delightful mix of espresso, steamed milk, and rich chocolate syrup, often topped with whipped cream. Perfect for those who love both coffee and dessert.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Cortado Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Cortado.jpg" alt="Cortado" class="card-img-top"> <!--https://unsplash.com/s/photos/Cortado-->
+                            <div class="card-body">
+                                <h5 class="card-title">Cortado</h5>
+                                <p class="card-text">A Spanish-style coffee with equal parts espresso and warm milk. Less frothy than a cappuccino, stronger than a latte.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Nitro Coffee Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/NitroCoffee.jpg" alt="Nitro Coffee" class="card-img-top"> <!--https://unsplash.com/s/photos/Nitro Coffee-->
+                            <div class="card-body">
+                                <h5 class="card-title">Nitro Coffee</h5>
+                                <p class="card-text">Infused with nitrogen gas, this cold brew coffee has a smooth, creamy texture and a naturally sweet finish—served straight from the tap.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Turkish Coffee Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/TurkishCoffee.jpg" alt="Turkish Coffee" class="card-img-top"> <!--https://unsplash.com/s/photos/Turkish Coffee-->
+                            <div class="card-body">
+                                <h5 class="card-title">Turkish Coffee</h5>
+                                <p class="card-text">Brewed in a copper pot over low heat, this fine-ground coffee is unfiltered and bold, often sweetened and served in small cups.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$10.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+						
+                    </div>
+                </div>
+            </div>
+
+            <!-- Iced Coffee Tab -->
+            <div class="tab-pane fade" id="iced-coffee" role="tabpanel" aria-labelledby="iced-coffee-tab">
+                <div class="row g-4">
+                    <!-- Iced Americano Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/IcedAmericano.jpg" alt="Iced Americano" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Iced Americano</h5>
+                                <p class="card-text">A chilled version of the classic Americano—made by pouring espresso over cold water and ice. Light, clean, and perfect for a caffeine kick on hot days.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$12.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Cold Brew Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/ColdBrew.jpg" alt="Cold Brew" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cold Brew</h5>
+                                <p class="card-text">Coffee brewed slowly with cold water for 12–24 hours. Low in acidity, mellow in taste, and great over ice or with milk.​</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$12.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Ice Drip Coffee Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/IceDripCoffee.jpg" alt="Ice Drip Coffee" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Ice Drip Coffee</h5>
+                                <p class="card-text">Also known as Dutch coffee, this is brewed drop by drop with cold water over several hours. It creates a clean, layered flavor.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$12.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Nitro Cold Brew Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/NitroColdBrew.jpg" alt="Nitro Cold Brew" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Nitro Cold Brew</h5>
+                                <p class="card-text">Cold brew infused with nitrogen for a rich, creamy texture and beer-like foam. Served straight from the tap—no sugar or milk needed.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$12.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Fruit Iced Coffee Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/FruitIcedCoffee.jpg" alt="Fruit Iced Coffee" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Fruit Iced Coffee</h5>
+                                <p class="card-text">A refreshing fusion of espresso and citrus or seasonal fruits like orange, lemon, or berries. Sweet, tangy, and totally refreshing.​​</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$12.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Smoothie Tab -->
+            <div class="tab-pane fade" id="smoothie" role="tabpanel" aria-labelledby="smoothie-tab">
+                <div class="row g-4">
+                    <!-- Strawberry Smoothie Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/StrawberrySmoothie.jpg" alt="Strawberry Smoothie" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Strawberry Smoothie</h5>
+                                <p class="card-text">Made with real strawberries, blended to a creamy, icy treat. It’s fruity, refreshing, and always a crowd favorite!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$8.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Banana Smoothie Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/BananaSmoothie.jpg" alt="Banana Smoothie" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Banana Smoothie</h5>
+                                <p class="card-text">A rich blend of ripe bananas and milk or yogurt. Naturally sweet and satisfying—perfect for a healthy, tasty boost!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$8.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Blueberry Smoothie Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/BlueberrySmoothie.jpg" alt="Blueberry Smoothie" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Blueberry Smoothie</h5>
+                                <p class="card-text">Packed with juicy blueberries, this smoothie is slightly tart, vibrant in color, and full of fruity goodness.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$8.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Mocha Frappe Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/MochaFrappe.jpg" alt="Mocha Frappe" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Mocha Frappe</h5>
+                                <p class="card-text">A frozen blend of espresso, chocolate, and milk, topped with whipped cream. It’s dessert and coffee in one delicious cup.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$8.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tea Tab -->
+            <div class="tab-pane fade" id="tea" role="tabpanel" aria-labelledby="tea-tab">
+                <div class="row g-4">
+                    <!-- Biluochun Green Tea Card -->
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/BiluochunGreenTea.jpg" alt="Biluochun Green Tea" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Biluochun Green Tea</h5>
+								<p class="card-text">Light & Refreshing with a Floral-Fruity Aroma</p>
+                                <p class="card-text">Made with hand-picked spring leaves, this green tea has a delicate, slightly sweet taste and a smooth, crisp finish. A perfect choice for a low-caffeine, refreshing tea base.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$6.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Biluochun Green Tea Card -->
+					<div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/DianhongBlackTea.jpg" alt="Biluochun Green Tea" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Dianhong Black Tea</h5>
+								<p class="card-text">Bold & Malty with a Hint of Sweetness</p>
+                                <p class="card-text">From Yunnan, this golden-tipped black tea is rich in flavor and deep in color. Perfect for milk tea blends with a full-bodied finish and natural sweetness.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$6.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- White Peony Tea (Bai Mudan) Card -->
+					<div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/WhitePeonyTea.jpg" alt="White Peony Tea" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">White Peony Tea</h5>
+								<p class="card-text">Smooth & Floral,With a Lightly & Sweet</p>
+                                <p class="card-text">A soft white tea with gentle floral notes and a clean taste. Great on its own or paired with fruit or cheese foam toppings.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$6.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Pu-erh Tea Card -->
+					<div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/Pu-erhTea.jpg" alt="Pu-erh Tea" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Pu-erh Tea</h5>
+								<p class="card-text">Earthy & Mellow, Aged to Perfection</p>
+                                <p class="card-text">This fermented tea from Yunnan brings a smooth, earthy flavor that pairs well with milk. Known for its health benefits and unique aged character.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$6.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					<!-- Tieguanyin Oolong Tea Card -->
+					<div class="col-md-4 d-flex justify-content-center">
+                        <div class="card shadow-sm w-100" style="max-width: 350px;">
+                            <img src="./assets/images/TieguanyinOolongTea.jpg" alt="Tieguanyin Oolong Tea" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Tieguanyin Oolong Tea</h5>
+								<p class="card-text">Floral & Toasty with a Rich Aftertaste</p>
+                                <p class="card-text">This semi-oxidized oolong has a deep aroma and layered taste—perfect as a base for milk tea or fruit tea with a touch of elegance.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>$6.00</span>
+                                    <button class="btn btn-sm cartbtn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div id="cart-notification" class="alert alert-success" style="display:none; position: fixed; bottom: 20px; right: 20px;">
+        Item added to cart!
+    </div>
+	
+	</div>
+   
+	
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>TAE Café</h3>
+                <img src="./assets/images/logo-icon.png" alt="This is the logo of the café">
+                <p>Where code meets tea.<br>&copy; 2025 TAE Café.<br> All rights reserved.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="promotion.html">Get A Discount</a></li>
+                <li><a href="aboutus.html">Our History</a></li>
+                <li><form><button formaction="contactus.html" class="btn btn-sm cartbtn">Contact Us</button></form></li>			
+            </ul>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+<script src="./assets/scripts/ourproducts_gallery.js"></script>
+<script src="ourproducts_gallery.js"></script>
+</body>
+</html>

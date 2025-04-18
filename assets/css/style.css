@@ -1,0 +1,1933 @@
+:root {
+    --text: #362222;
+    --background: #fee9ec;
+    --navbar-background: #bc2c00;
+    --primary: #B3541E;
+    --secondary: #bc2c00;
+    --accent: #dcc7aa;
+    --card-background:#bc764d;
+}
+
+/*/ Global style  /*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+}
+
+body {
+    display: grid;
+    max-width: 100vw;
+    height: 350vh;
+    grid-template-areas: 
+    "navbar"
+    "content"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1fr 0.1fr;
+    overflow-x: hidden;
+    background-color: var(--accent);
+    background-size: cover;
+} /*/ It divides the main body in three section using grid where the navbar and the footer are defaul for all pages /*/
+
+.body-gallery,
+.body-ourproducts {
+  margin-top:50px;
+  
+}
+
+.body-gallery,
+.body-aboutus {
+  margin-top: 125px;
+}
+
+.body-ourproducts {
+  height: auto;
+}
+
+/*/ Navbar style /*/
+
+.nav-bar {
+  position:fixed;
+  grid-area: navbar;
+  width: 100%;
+  height: 9%;
+  background-color: var(--navbar-background);
+  border-radius: 0% 0% 50% 50% / 0% 0% 500% 500%;
+  z-index: 1000;
+  justify-items: center;
+
+}
+
+.nav-bar nav{
+  display: flex;
+  justify-content: center;
+  color: white;
+
+}
+
+.nav-bar, .nav-bar a, .nav-bar li {
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  cursor: pointer;
+  justify-content: space-evenly;
+  padding: 5px 5px 5px 0;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.nav-bar a {
+  padding: 0 0 0 80px;
+}
+
+.nav-bar li:hover {
+  color: var(--text);
+}
+
+.nav-bar li a:hover::after {
+  width: 100%;
+}
+
+.nav-bar-logo-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar-logo {
+  max-width: 13%;
+  object-fit: contain;
+  grid-area:navbar;
+  background-color: var(--navbar-background);
+  border-radius: 50px;
+  padding:10px;
+  margin: -3% 0 0 43%;
+}
+
+/*/ Footer style /*/
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--navbar-background);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.footer img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  padding:10px;
+}
+
+.footer-logo {
+  width: 20%;
+  padding: 10px;
+  margin: 20px;
+  color: var(--accent);
+  border-right: 1px solid var(--accent);
+}
+
+.footer-logo p {
+  color: var(--accent);
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 20%;
+  justify-content: space-evenly;
+  padding: 5px 5px 5px 0;
+  margin-top: 120px;
+}
+
+.footer-links li, .footer-links a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: small;
+}
+
+.footer-links a {
+  border-left: 1px solid var(--accent);
+  padding-left: 20px;
+}
+
+.footer-links button {
+  background-color: var(--card-background);
+  border: none;
+}
+
+.mobile-nav-bar {
+  display: none;
+}
+
+/*/ PAGE 1 - INDEX PAGE (HOME) /*/
+
+.body-homepage {
+  display: grid;
+  grid-area: content;
+  grid-template-rows: auto auto auto auto;
+  height: 100%;
+  min-width: 100%;
+}
+
+.homepage-background{
+  display: flex;
+  background-image:url(../images/tea_background.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+  height:100vh;
+  opacity:0.9;
+  margin:0;
+  padding-top: 60px;
+  box-sizing: border-box;
+  grid-row: 1;
+  grid-template-rows: 1fr;
+
+}
+
+.homepage-background h1{
+  font-family: "Permanent Marker", cursive;
+}
+
+.homepage-background h1{
+  font-family: "Trirong";
+}
+
+.smoke-effect{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-template-rows: 1fr;
+  height:100vh;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0.4;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.text-welcome{
+  position: absolute;
+  text-align: center;
+  top:60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0;
+  z-index: 10;
+  font-family: "Permanent Marker", cursive;
+
+
+}
+
+.homepage-apresentation-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background-color: var(--navbar-background);
+  margin-top: 0;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+ 
+}
+
+.homepage-apresentation {
+  max-width: 100%;
+  width: 600px;
+  background-color: var(--accent);
+  border-radius: 0 0 100px 100px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  grid-row: 2;
+  max-width: 1200px;
+}
+
+.homepage-apresentation img{
+  width: 50%;
+  border-radius: 0 0 100px 100px;
+}
+
+.home-carousel {
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  margin: auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.home-slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease;
+
+}
+
+.home-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: auto;
+  display: none;
+  object-fit: cover;
+}
+
+.home-slide img, 
+.home-slides img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-slide.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+.apresentation-message {
+  gap: 20px;
+  display: block;
+  background-color: var(--accent);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  grid-row: 3;
+  align-items: center;
+  text-align: center;
+}
+
+.body-homepage h1{
+  font-family: "Permanent Marker", cursive;
+}
+
+.apresentation-message .btn{
+  background-color: var(--navbar-background);
+  color: var(--background);
+  border: var(--navbar-background);
+  margin-top: 20px;
+}
+
+
+.homepage-products{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  grid-row: 4;
+}
+
+.homepage-products .products-item{
+display: flex;
+  flex-direction: column;
+}
+
+.products-item {
+  text-align: center;
+  gap: 20px;
+  background-size:cover;
+  background-position: top center;
+  background-attachment: scroll;
+  background: var(--secondary);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.products-item img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.products-item p {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 18px;
+  display: block;
+}
+
+.products-item:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translate(-50%, -60%);
+      opacity: 0;
+  }
+  100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+  }
+}
+
+.homepage-promo{
+  background-color:var(--accent);
+  grid-row: 5;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: 200px;
+  justify-content:center;
+}
+
+.homepage-promo img{
+width: 100%;
+}
+
+
+.text-promo{
+  display: block;
+  align-content: center;
+}
+
+.flower-wrapper {
+width: 200px;
+height: 200px;
+position: relative;
+}
+
+.flower {
+width: 80px;
+height: 80px;
+background-color: var(--bs-warning, #f0ad4e); /* centro da flor */
+border-radius: 50%;
+border: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 10;
+cursor: pointer;
+}
+
+.flower::before,
+.flower::after {
+content: '';
+position: absolute;
+width: 140px;
+height: 140px;
+background: radial-gradient(circle at center, var(--bs-pink, #ff69b4) 40%, transparent 41%);
+border-radius: 50%;
+z-index: -1;
+}
+
+.flower::before {
+transform: translate(-50%, -50%) rotate(45deg);
+top: 50%;
+left: 50%;
+}
+
+.flower::after {
+transform: translate(-50%, -50%) rotate(-45deg);
+top: 50%;
+left: 50%;
+}
+
+/*/PAGE 2 - OUR PRODUCTS /*/
+
+.nav-menu {
+  background-color:var(--navbar-background);
+  padding:10px;
+  border-radius:10px;
+  
+}
+
+.nav-menu div .nav li a {
+  color:var(--accent);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color:var(--background);
+  color:var(--text);
+}
+
+.Ourproducts {
+  grid-area:content;
+}
+
+.Ourproducts .tab-content {
+  background-color: var(--navbar-background);
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+  
+.Ourproducts .card {
+    border-radius: 20px;
+}
+
+.Ourproducts .card-body {
+    padding: 20px;
+}
+
+.Ourproducts .card-body button {
+  background-color:var(--navbar-background);
+  color:var(--accent);
+}
+
+
+.Ourproducts .card-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.Ourproducts .card-text {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #362222;
+}
+
+.Ourproducts .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0 / 20px 20px 0 0;
+    transition: transform 0.3s ease;
+  cursor:pointer;
+}
+
+.Ourproducts .card img:hover {
+    transform: scale(0.9);
+  opacity: 0.7;
+}
+
+/*/PAGE 3 - GALLERY /*/
+
+.gallery-card-v3 {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+.gallery-card-v3 .image-layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-card-v3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.gallery-card-v3 .title-overlay {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: "Permanent Marker", cursive;
+font-size: 1.25rem;
+color: var(--text);
+background-color: rgba(255, 255, 255, 0.7);
+padding: 10px 20px;
+border-radius: 10px;
+transition: all 0.5s ease;
+z-index: 2;
+
+/* 增强适配性 */
+text-align: center;
+word-break: break-word;
+max-width: 90%;
+}
+
+.gallery-card-v3 .desc-overlay {
+position: absolute;
+bottom: -100px;
+left: 0;
+width: 100%;
+padding: 20px;
+font-family: "Permanent Marker", cursive;
+font-size: 1rem;
+background-color: rgba(255, 255, 255, 0.85);
+color: var(--text);
+transition: bottom 0.5s ease;
+z-index: 2;
+
+/* Ensure responsive text wrapping and adaptation */
+
+word-break: break-word;
+overflow-wrap: break-word;
+line-height: 1.5;
+max-height: 100%;
+box-sizing: border-box;
+}
+
+.gallery-card-v3:hover img {
+  filter: blur(0);
+  transform: scale(1.1);
+}
+
+.gallery-card-v3:hover .title-overlay {
+  top: 20px;
+  left: 20px;
+  transform: none;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.gallery-card-v3:hover .desc-overlay {
+  bottom: 0;
+}
+
+.gallery-card-left {
+margin-left: auto;
+margin-right: 100px;
+}
+
+.gallery-card-right {
+margin-right: auto;
+margin-left: 100px;
+}
+
+
+/*/PAGE 4 - GET A DISCOUNT /*/
+
+.body-promotion {
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  width: 100%;
+  max-height:100%;
+  justify-self: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.body-promotion h1 {
+background: linear-gradient(90deg, var(--card-background) 0%, var(--navbar-background) 50%, var(--card-background) 100%); 
+border-radius: 20px;
+padding: 10px;
+margin-top: 20px;
+width: 100%;
+text-align: center;
+color:var(--background);
+overflow-x: hidden;
+}
+
+.promo-container-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 35%;
+  background-color: var(--card-background);
+  margin: 10px 0 30px 0;
+
+}
+
+.promo-banner {
+  overflow-x: hidden;
+  width: 50%;
+  height: 100%;
+}
+
+.promo-banner img {
+  height: 100%;
+}
+
+.promo-text h2, .promo-text p {
+  color: var(--navbar-background);
+  font-size: 3rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+
+}
+
+.promo-container-info .promo-banner img{
+  width: 80%;
+  height: 50%;
+  filter: contrast(1.4);
+}
+
+.promo-banner .carousel {
+max-height: 100%;
+}
+
+.game-info {
+display: flex;
+width: 100%;
+height: 40%;
+justify-content: center;
+font-size: 15pt;
+overflow: hidden;
+margin-bottom: 50px;
+}
+
+.instruction-text{
+display: flex;
+flex-direction: row;
+justify-content: center;
+text-align: center;
+place-items: center;
+width:100%;
+height: 100%;
+border: none;
+transition: 0.5s ease-in-out;
+cursor: pointer;
+
+}
+
+.instruction-text span {
+  visibility: hidden;
+}
+
+.popover {
+background-color: var(--accent);
+border: 2px solid --card-background;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+opacity: 0.9;
+}
+
+.popover-header {
+background-color: var(--navbar-background);
+color: white;
+font-weight: bold;
+text-align: center;
+border-bottom: none;
+}
+
+.popover-body {
+color: #333;
+font-size: 16px;
+text-align: center;
+}
+
+
+.instruction-text:nth-child(1) {
+position: relative;
+filter: grayscale(1);
+background-image: url(/assets/images/table-window.jpg);
+background-size: cover;
+}
+
+.instruction-text:nth-child(2) {
+position: relative;
+filter: grayscale(1);
+background-image: url(/assets/images/three-shots.jpg);
+background-size: cover;
+}
+
+.instruction-text:nth-child(3) {
+position: relative;
+filter: grayscale(1);
+background-image: url(/assets/images/coffee-friends.jpg);
+background-size: cover;
+}
+
+.instruction-text:nth-child(4) {
+position: relative;
+filter: grayscale(1);
+background-image: url(/assets/images/coffee-neon.jpg);
+background-size: cover;
+}
+
+.instruction-text:hover {
+filter: none;
+scale: 1.1;
+z-index: 100;
+filter: blur(0.5px);
+}
+
+.instruction-text:hover span {
+  font-weight: 600;
+  color: white;
+  visibility: visible;
+}
+
+.promo-container-game {
+  display: grid;
+  grid-template-areas: 
+  "first second third"
+  "fourth fifth sixth"
+  "seventh eighth nineth";
+  grid-template-columns: 0.25fr 0.25fr 0.25fr;
+  grid-template-rows: 0.2fr 0.2fr 0.2fr;
+  place-items: center;
+  place-content: center;
+  justify-content: center;
+  width: 30%;
+  height: 90%;
+  margin: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(66, 68, 90, 1);
+  border-radius: 50px;
+  background: linear-gradient(180deg, var(--primary) 0%, rgba(125,125,125,0.1) 100%);
+  background-color: #b61c1c;
+}
+
+.card-game {
+  width: 90%;
+  height: 95%;
+  margin:5px;
+  border-radius: 10%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(203, 203, 112);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  position: relative;
+  font-size: 13pt;
+  text-align: center;
+  align-items: center;
+}
+
+
+#card-1 {
+  grid-area: first;
+}
+#card-2 {
+  grid-area: second;
+}
+#card-3 {
+  grid-area: third;
+}
+#card-4 {
+  grid-area: fourth;
+}
+#card-5 {
+  grid-area: fifth;
+}
+#card-6 {
+  grid-area: sixth;
+}
+#card-7 {
+  grid-area: seventh;
+}
+#card-8 {
+  grid-area: eighth;
+}
+#card-9 {
+  grid-area: nineth;
+}
+
+.card-game::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  background: linear-gradient(90deg, var(--card-background) 0%, var(--navbar-background) 50%, var(--card-background) 100%); 
+}
+
+.card-game:hover::before {
+  left: 120%;
+  background: linear-gradient(90deg, var(--card-background) 0%, var(--navbar-background) 50%, var(--card-background) 100%); 
+}
+
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  background-color: #e49e75;
+  border-radius: 20px;
+  margin-bottom: 10px;
+
+}
+
+.game-title {
+  background-color: #e49e75;
+  font-size: 1.5rem;
+  width: 90%;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.game-container p{
+  background-color: #362222;
+  color: rgb(221, 203, 203);
+  height: 18%;
+  width: 100%;
+  text-wrap: inital;
+  text-align: center;
+  align-content: center;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 15pt;
+  position: relative;
+  left:12px;
+  top:0;
+  border-radius: 200px 0 0 200px / 200px 0 0 200px;
+  box-shadow: 0px 7px 5px 0px rgba(66, 68, 90, 1);
+}
+
+
+/*/PAGE 5 - OUR HISTORY (ABOUT US) /*/
+
+.body-aboutus {
+  display: flex;
+  flex-direction: column;
+  grid-area: content;
+  width: 95%;
+  height: 100%;
+  border-radius: 20px;
+  place-self: center;
+}
+
+.body-aboutus>*{
+  margin-bottom: 20px;
+}
+
+
+.body-history {
+  display: flex;
+  width: 100%;
+  max-height: 35%;
+  flex-direction: column;
+  text-align: center;
+  align-items: left;
+  border-radius: 20px;
+  margin: 0 0 0 0;
+  padding: 20px;
+  background-image: url(/assets/images/coffee-banner-2.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: background-size 5s ease-in-out;
+}
+
+
+
+.body-team {
+  display: flex;
+  width: 100%;
+  max-height: 40%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: var(--navbar-background);
+  border-radius: 20px;
+  padding: 20px;
+  
+}
+
+
+.history-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  opacity: 0.9;
+  background-color: var(--navbar-background);
+  border-radius: 20px;
+}
+
+.history-text p{
+  width: 100%;
+  max-height: 100%;
+  text-align:justify;
+  font-weight: 300;
+  z-index: 500;
+  color:white;
+  padding:20px;
+  font-size: 2.55vh;
+
+}
+
+.body-history h2 {
+color:white;
+padding: 10px;
+width: 100%;
+
+}
+
+.history-image {
+  width: 350px;
+  height: 300px;
+  border-radius: 70% 50% 50% 50% / 60% 80% 50% 40%;
+  padding: 10px;
+}
+
+.about-us-banner {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+height: 10%;
+margin: 20px 0 40px 0;
+justify-content: center;
+align-items: center;
+justify-content: space-between;
+}
+
+.about-us-banner p {
+width: 30%;
+height: 90%;
+margin:20px;
+text-align: center;
+align-content: center;
+font-size: 23pt;
+opacity: 0;
+}
+
+.about-us-banner p:nth-child(1) {
+animation: fadeInOut 12s ease-in-out infinite;
+animation-delay: 0s;
+
+}
+.about-us-banner p:nth-child(2) {
+animation: fadeInOut 12s ease-in-out infinite;
+animation-delay: 3s;
+
+}
+.about-us-banner p:nth-child(3) {
+animation: fadeInOut 12s ease-in-out infinite;
+animation-delay: 6s;
+}
+
+.team-card-members {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  margin-bottom:20px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 5px 0 5px;
+  background-color: var(--card-background);
+  color: var(--background);
+}
+
+.team-card > * {
+  padding: 5px 5px 0 5px;
+}
+.body-team .team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  border: double 5px var(--background);
+}
+.body-team h2 {
+color: var(--accent);
+}
+
+.body-team .team-card p {
+  background-color: #dcc7aa;
+  height: 58%;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  text-align: justify;
+}
+
+.team-card:hover {
+  scale: 0.97;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  background-color: var(--accent);
+}
+
+.team-card:hover>*{
+  color: var(--text);
+  
+}
+
+.team-card:hover > p{
+  background-color: var(--card-background);
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/*/ PAGE 6 - CONTACT US /*/
+
+.contactus-background h1{
+  font-family: "Permanent Marker", cursive;
+  }
+
+.contactus-background h3{
+  font-family: "Permanent Marker", cursive;
+  }
+
+.contactus-background{
+  background-image:url(../images/contact_coffee.jpg);
+  background-size:cover;
+  background-position: top center;
+  background-attachment: scroll;
+  height:100vh;
+  opacity:0.6;
+  margin:0;
+  padding-top: 60px;
+  overflow: hidden;
+  box-sizing: border-box;
+  grid-row: 1;
+  grid-template-rows: 1fr;
+}
+
+.custom-box {
+  background-color: var(--background);
+  border:var(--background);
+  margin-bottom: 5px;
+}
+
+
+.contact-information{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-information .card{
+  background-color:var(--navbar-background);
+  margin:10px;
+
+}
+
+.card-header{
+  text-align:center;
+}
+
+.card-body{
+  text-align: center;
+  align-content: center;
+}
+
+.image-card{
+  align-content: center;
+}
+.image-card img{
+  width: 10px;
+}
+
+.cards-information{
+  padding: 20px;
+  width: 100% !important;
+}
+
+.form-wrapper {
+  display: flex;
+  width: 90%;
+  height:auto;
+  justify-content: center;
+  justify-self: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: var(--navbar-background);
+  border-radius: 20px;
+  margin-bottom: 0;
+  flex-grow: 1; 
+}
+
+.form-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--background);
+  max-width: 100%;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  flex: 1 1 3px;
+  margin-bottom: 0;
+}
+
+.image_form img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+
+}
+
+.image_form {
+  border-radius: 20px !important;
+
+}
+
+/* Buttons */
+.contactForm .btn-secondary {
+  background-color: var(--navbar-background);
+  color: var(--accent);
+  border: none;
+  margin-bottom: 10px;
+}
+
+.contactForm .btn-primary {
+  background-color: var(--navbar-background);
+  color: var(--accent);
+  border: none;
+}
+
+.contactForm .btn-primary:hover {
+  background-color: var(--navbar-background);
+}
+
+.card-img-top {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.card-body {
+  flex-grow: 1; 
+}
+
+.faq-background{
+  justify-self: center;
+  background-color: var(--navbar-background) !important;
+  border-radius:25px ;
+  margin-top: 20px;
+  padding-top: 10px;
+  width: 90%;
+}
+
+.faq-background .container h3 {
+  color: white;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  justify-self: center;
+}
+
+.accordion-item {
+  width: 45%;
+  height: 30%;
+  margin:5px;
+}
+
+.accordion-item {
+  overflow: hidden;
+}
+
+.accordion-item, .accordion-button{
+  border-radius: 20px;
+}
+
+.body-contactus {
+  flex: 1; 
+  grid-area: content;
+  width: 100%;
+
+  padding: 2rem 0;
+}
+
+.text-contact{
+  background-color: var(--accent);
+  border-radius:25px ;
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+}
+
+.image_form {
+  flex: 1 1 300px;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.image_form img {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  border-radius: 12px;
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.image_form img:hover {
+  transform: scale(1.05);
+}
+
+.scrollspy-example {
+  position: relative;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.btn-custom{
+  background-color: var(--navbar-background);
+  color: white;
+
+}
+
+/* Animation Classes */
+  
+.fade-in-rotate {
+  animation: fadeInRotate 1s ease forwards;
+}
+
+.flipped {
+  animation: rotate 1s ease forwards;
+}
+
+.winningCard {
+  animation: winningCard 1s ease forwards;
+}
+
+.shakecard {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Keyframes */
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} /* It moves horizontaly a card when it's clicked */
+
+@keyframes winningCard {
+  0%{
+    grid-area:fifth;
+  }
+  100% {
+    grid-area:fifth;
+    position: relative;
+    z-index: 1000;
+    width: 350px;
+    height: 350px;
+    font-size: 45pt;
+    font-weight: 500;
+  }
+} /* It zooms a card when it's a winning card */
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+} /* It rotate a card when the page is loaded */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    filter: blur(1px);
+  }
+  10% {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  25% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  75% {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  90% {
+    opacity: 0;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 0;
+  }
+} /* It makes a text fade in and fade out */
+
+@keyframes fadeInRotate {
+  0% {
+    opacity: 0;
+    transform: rotateZ(450deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(0deg) scale(1);
+  }
+}
+
+/*/MEDIA QUERY/*/
+
+
+/*/Small, medium and large smartphones, and Tablets/*/
+
+@media (min-width:0px) and (max-width:769px) {
+
+    /*/ Navbar style /*/
+
+   .mobile-nav-bar {
+    display: flex;
+    width: 90%;
+    border-radius: 50px;
+  }
+
+  .mobile-nav-bar .navbar, .offcanvas-body {
+    background-color: var(--navbar-background)!important;
+  }
+
+  .nav-bar,.nav-bar-logo {
+    visibility: hidden;
+    display:none;
+  }
+
+  .navbar-toggler-icon {
+    color: white;
+  }
+
+  /*/ Footer style /*/
+
+  .footer-links {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .footer-links li, .footer-links a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-logo {
+    width: 50%;
+  }
+
+  /*/About us style /*/
+
+  .history-text {
+    width: 100%;
+  }
+  .history-text p {
+    font-size: 3vh;
+  }
+
+  .about-us-banner {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .body-team {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    flex-direction: column;
+
+  }
+
+  .body-history {
+    background-size: cover;
+  }
+
+  .team-card-members {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .team-card {
+    flex-direction: column;
+    width: 100%;
+    max-height: 70%;
+    margin-bottom: 10px;
+  }
+
+  .body-team .team-card p {
+    font-size: 3vh;
+    height: 60%;
+  }
+
+  /*/ Promo Page /*/
+
+  .promo-container-info {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 35%;
+    background-color: var(--card-background);
+    margin: 50px 0 30px 0;
+    background-image: url(../images/coffee-light-3.jpg);
+    background-size: cover;
+    background-position: 40%;
+    background-repeat: repeat;
+  
+  }
+  
+  .promo-banner {
+    overflow-x: hidden;
+    display: none;
+  }
+  
+  .promo-banner img {
+    display: none;
+  }
+  
+  .promo-text h2, .promo-text p {
+    font-size: 0.8rem;
+    color: white;
+    background-color: #b61c1c;
+    padding: 3px;
+  }
+
+  .promo-text h2 {
+    position: relative;
+    top:-30%;
+    left:-35%;
+  }
+
+  .promo-text p {
+    position: relative;
+    bottom:-40%;
+    right:-30%;
+  }
+  
+  .promo-text {
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .promo-container-info .promo-banner img,  .promo-banner .promo-carousel {
+    display: none;
+  }
+  
+  .game-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 45%;
+    width: 100%;
+  }
+
+  .game-title {
+    display: none;
+  }
+
+  .instruction-text {
+    width: 40%;
+    height:  50%;
+    margin: 1rem;
+  }
+
+  .game-container {
+    display: grid;
+    grid-template-areas: 
+      "title"
+      "text"
+      "game";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.3fr 0.4fr;
+    gap: 0.1rem;
+    place-items: center;
+    background-color: var(--card-background);
+  }
+
+  .promo-container-game {
+    grid-area: game;
+  }
+
+  .game-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .game-container::before {
+    content: "CHOOSE YOUR CARD AND FIND OUT YOUR PRIZE";
+    margin: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .game-container p {
+    width: 22rem;
+    font-size: 0.8rem;
+    grid-area: text;
+    border-radius: 200px;
+    padding:1rem;
+    left:0;
+  }
+
+  .game-text { 
+    width: 60%;
+  }
+
+  .promo-container-game {
+    width: 20rem;
+    height: 100%;
+    min-height: 25rem; 
+    margin: 20px 0 20px 0;
+  }
+
+  .card-game {
+    width: 95%;
+    margin: 5px;
+  }
+
+  /*Our Products Page */
+
+  .gallery-card-v3 {
+    height: auto;
+    max-width: 90%;
+  }
+
+  .gallery-card-v3 img {
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .gallery-card-v3 .title-overlay {
+    font-size: 1.05rem;
+    padding: 8px 16px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gallery-card-v3 .desc-overlay {
+    font-size: 0.95rem;
+    padding: 15px;
+    line-height: 1.4;
+  }
+
+  .nav-bar nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    justify-self: center;
+  }
+
+  .nav-bar a {
+    padding: 5px 0;
+  }
+
+  /* Contact Us Page */
+
+  .faq-background{
+    justify-self: center;
+    background-color: var(--navbar-background) !important;
+    border-radius:25px ;
+    padding: 10px;
+    width: 98%;
+  }
+  
+  
+  .accordion {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .accordion-item {
+    width: 100%;
+    height: 40%;
+  }
+
+  .form-wrapper {
+    font-size: 0.8rem;
+  }
+
+  .image_form img {
+    display: none;
+  }
+
+  .contactForm .btn {
+    font-size: 0.8rem;
+  }
+
+  /* Home Page */
+
+  .homepage-apresentation-back {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .homepage-apresentation {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+
+  .home-slide {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  button.prev,
+  button.next {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+    top: 45%;
+  }
+  
+}
+
+/*/ Tablets - Landscape /*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /*/ Navbar style /*/
+
+ .mobile-nav-bar {
+  display: flex;
+  width: 90%;
+  border-radius: 50px;
+}
+
+.mobile-nav-bar .navbar, .offcanvas-body {
+  background-color: var(--navbar-background)!important;
+}
+
+.nav-bar,.nav-bar-logo {
+  visibility: hidden;
+  display:none;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+/*/ Footer style /*/
+
+.footer-links {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer-links li, .footer-links a {
+  width: 100%;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 50%;
+}
+
+/*/ Our Products /*/
+
+.Ourproducts {
+  margin-top: 10px;
+}
+
+/*/About us style /*/
+
+.history-text {
+  width: 100%;
+  max-height: 100%;
+}
+.history-text p {
+  font-size: (1rem, 2.5vw, 2rem)
+}
+
+.body-team {
+  max-height: 100%;
+}
+
+.team-card-members {
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.body-team .team-card p {
+  font-size: 2.5vh;
+  height: 100%;
+}
+
+}
+@media (min-width: 1024px) and (max-width:3000px) {
+
+  /*/ Navbar style /*/
+
+ .mobile-nav-bar {
+  display: none;
+}
+
+.nav-bar,.nav-bar-logo {
+  visibility: visible;
+}
+
+/*/ Footer style /*/
+
+.footer-links {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer-links li, .footer-links a {
+  width: 100%;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 50%;
+}
+
+/*/About us style /*/
+
+.body-aboutus  {
+  width: 90%;
+  height: 100%;
+}
+
+.history-text {
+  width: 60%;
+  max-height: 100%;
+}
+.history-text p {
+  font-size: (1rem, 2.5vw, 2rem)
+}
+
+.about-us-banner {
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.body-team {
+  width: 100%;
+  max-height: 100%;
+}
+
+
+.team-card-members {
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.team-card {
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  margin-bottom: 10px;
+}
+
+.body-team .team-card p {
+  font-size: 2.5vh;
+  height: 60%;
+}
+}
