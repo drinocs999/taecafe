@@ -802,7 +802,7 @@ background-size: cover;
 .instruction-text:nth-child(4) {
 position: relative;
 filter: grayscale(1);
-background-image: url(/assets/images/coffee-neon.jpg);
+background-image: url(../images/coffee-neon.jpg);
 background-size: cover;
 }
 
