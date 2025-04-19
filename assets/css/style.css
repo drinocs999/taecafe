@@ -1460,343 +1460,11 @@ color: var(--accent);
 
 /*/MEDIA QUERY/*/
 
-@media (min-width:0px) and (max-width:900px) {
-  
-  body {
-    min-height: 100vh;
-}
-  
-  /*/ Navbar style /*/
-
-  .mobile-nav-bar {
-    display: flex;
-    width: 90%;
-    border-radius: 50px;
-  }
-
-  .mobile-nav-bar .navbar, .offcanvas-body {
-    background-color: var(--navbar-background)!important;
-  }
-
-  .nav-bar,.nav-bar-logo {
-    visibility: hidden;
-    display:none;
-  }
-
-  .navbar-toggler-icon {
-    color: white;
-  }
-
-  /*/ Footer style /*/
-
-  .footer-links {
-    width: 50%;
-    height: 100%;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .footer-links li, .footer-links a {
-    width: 100%;
-    text-align: left;
-  }
-
-  .footer-logo {
-    width: 50%;
-  }
-
-}
-
-
-/*/Small, medium and large smartphones, and Tablets/*/
-
-@media (min-width:0px) and (max-width:769px) {
-
-  /*/About us style /*/
-
-  .history-text {
-    width: 100%;
-  }
-  .history-text p {
-    font-size: 3vh;
-  }
-
-  .about-us-banner {
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-
-  .body-team {
-    display: flex;
-    width: 100%;
-    max-height: 100%;
-    flex-direction: column;
-
-  }
-
-  .body-history {
-    background-size: cover;
-  }
-
-  .team-card-members {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-
-  .team-card {
-    flex-direction: column;
-    width: 100%;
-    max-height: 70%;
-    margin-bottom: 10px;
-  }
-
-  .body-team .team-card p {
-    font-size: 3vh;
-    height: 60%;
-  }
-
-  /*/ Promo Page /*/
-
-  .body-promotion {
-    
-  }
-  
-  .promo-container-info {
-    flex-direction: column-reverse;
-    width: 100%;
-    height: 33%;
-    background-color: var(--card-background);
-    margin: 50px 0 30px 0;
-    background-image: url(../images/coffee-light-3.jpg);
-    background-size: cover;
-    background-position: 40%;
-    background-repeat: repeat;
-  
-  }
-
-  .game-info {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 33%;
-    width: 100%;
-  }
-
-  .game-container {
-    width: 98%;
-    height: 33%;
-    padding-bottom: 10px;
-    justify-content: center;
-  }
-
-  
-  .promo-banner {
-    overflow-x: hidden;
-    display: none;
-  }
-  
-  .promo-banner img {
-    display: none;
-  }
-  
-  .promo-text h2, .promo-text p {
-    font-size: 0.8rem;
-    color: white;
-    background-color: #b61c1c;
-    padding: 3px;
-  }
-
-  .promo-text h2 {
-    position: relative;
-    top:-30%;
-    left:-35%;
-  }
-
-  .promo-text p {
-    position: relative;
-    bottom:-40%;
-    right:-30%;
-  }
-  
-  .promo-text {
-    width: 100%;
-    height: 100%;
-  
-  }
-  
-  .promo-container-info .promo-banner img,  .promo-banner .promo-carousel {
-    display: none;
-  }
-  
-
-  .game-title {
-    display: none;
-  }
-
-  .instruction-text {
-    width: 40%;
-    height:  50%;
-    margin: 1rem;
-  }
-
-  .game-container {
-    display: grid;
-    grid-template-areas: 
-      "title"
-      "text"
-      "game";
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.3fr 0.4fr;
-    place-items: center;
-    background-color: var(--card-background);
-  }
-
-  .promo-container-game {
-    grid-area: game;
-  }
-
-  .game-container::before {
-    content: "CHOOSE YOUR CARD AND FIND OUT YOUR PRIZE";
-    margin: 2rem;
-    font-weight: 500;
-    text-align: center;
-  }
-  .game-container p {
-    width: 22rem;
-    font-size: 10pt;
-    grid-area: text;
-    border-radius: 200px;
-    padding:0.2rem;
-    left:0;
-  }
-
-  .game-text { 
-    width: 100%;
-  }
-
-  .promo-container-game {
-    width: 20rem;
-    height: 100%;
-    min-height: 25rem; 
-    margin: 20px 0 20px 0;
-  }
-
-  .card-game {
-    width: 95%;
-    margin: 5px;
-  }
-
-  /*Our Products Page */
-
-  .gallery-card-v3 {
-    height: auto;
-    max-width: 90%;
-  }
-
-  .gallery-card-v3 img {
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-  }
-
-  .gallery-card-v3 .title-overlay {
-    font-size: 1.05rem;
-    padding: 8px 16px;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .gallery-card-v3 .desc-overlay {
-    font-size: 0.95rem;
-    padding: 15px;
-    line-height: 1.4;
-  }
-
-  .nav-bar nav {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .nav-menu {
-    justify-self: center;
-  }
-
-  .nav-bar a {
-    padding: 5px 0;
-  }
-
-  /* Contact Us Page */
-
-  .faq-background{
-    justify-self: center;
-    background-color: var(--navbar-background) !important;
-    border-radius:25px ;
-    padding: 10px;
-    width: 98%;
-  }
-  
-  
-  .accordion {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .accordion-item {
-    width: 100%;
-    height: 40%;
-  }
-
-  .form-wrapper {
-    font-size: 0.8rem;
-  }
-
-  .image_form img {
-    display: none;
-  }
-
-  .contactForm .btn {
-    font-size: 0.8rem;
-  }
-
-  /* Home Page */
-
-  .homepage-apresentation-back {
-    padding: 1rem;
-    flex-direction: column;
-  }
-
-  .homepage-apresentation {
-    width: 100%;
-    padding: 0.5rem;
-    text-align: center;
-  }
-
-
-  .home-slide {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-
-  button.prev,
-  button.next {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.6rem;
-    top: 45%;
-  }
-  
-}
-
 @media (min-width: 769px) and (max-width:900px) {
 
 }
 
-/*/ Tablets - Landscape /*/
+/*/ Tablets - Portrait /*/
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -1826,7 +1494,7 @@ color: var(--accent);
 .footer-links {
   width: 50%;
   height: 100%;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   margin-top: 0;
 }
@@ -1872,4 +1540,48 @@ color: var(--accent);
   height: 100%;
 }
 
+/* Promotion Page */
+
+.game-container {
+  width: 98%;
+  height: 10%;
+  padding-bottom: 10px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  }
+
+
+}
+
+  @media (min-width: 1024px) and (max-width:1600px) {
+
+    body {
+      height: 320vh;
+    }
+
+    .body-promotion {
+      height: 100%;
+    }
+
+    .promo-container-info {
+      width: 100%;
+      height: 40%;
+
+    }
+    .game-container {
+      width: 98%;
+      height: 50%;
+      padding-bottom: 10px;
+    }
+    
+    .game-info {
+      width: 100%;
+      height: 30%;
+    }
+    /* CORRETO */
 }
