@@ -1,100 +1,105 @@
-
-window.onload = function (){
-    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname === "/index.html") {
-    const name = prompt("For a personalized experience on our website, please enter your name:");
-
-    if(name && name.trim() !== "" ){
-        const welcomeElement1 = document.getElementById("welcome");
-        welcomeElement1.textContent =`${name.trim()}, WELCOME TO TAE CAFÉ!`;
-        name.valueOf = "";
-    }
-
-    // Carrossel
-    const slides = document.querySelectorAll(".slide");
-    const previousBtn = document.getElementById("previousBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    if (slides.length && previousBtn && nextBtn) {
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle("active", i === index);
-            });
+window.onload = function () {
+    const path = window.location.pathname;
+  
+    if (path.endsWith("index.html") || path === "/" || path === "/index.html") {
+      let name = localStorage.getItem("userName");
+  
+      if (!name) {
+        name = prompt("For a personalized experience on our website, please enter your name:");
+        if (name && name.trim() !== "") {
+          name = name.trim();
+          localStorage.setItem("userName", name); // Salva o nome localmente
         }
-
-        function moveSlideNext() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
+      }
+  
+      if (name && name.trim() !== "") {
+        const welcomeElement = document.getElementById("welcome");
+        if (welcomeElement) {
+          welcomeElement.textContent = `${name}, WELCOME TO TAE CAFÉ!`;
         }
-
-        function moveSlidePrevious() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
+      }
+  
+      // CARROSSEL
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".home-slide");
+      const previousBtn = document.getElementById("previousBtn");
+      const nextBtn = document.getElementById("nextBtn");
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+  
+      function moveSlideNext() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+  
+      function moveSlidePrevious() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+  
+      if (nextBtn && previousBtn && slides.length > 0) {
         nextBtn.addEventListener("click", moveSlideNext);
         previousBtn.addEventListener("click", moveSlidePrevious);
-
-        // show the first slide
-        showSlide(currentSlide);
+        showSlide(currentSlide); // Mostrar o primeiro slide ao carregar
+      }
     }
-};
-
-//validating the form
-document.addEventListener('DOMContentLoaded', function () {
-    // analyse if we're in 'contactus.html'
-    if (window.location.pathname.endsWith("contactus.html")) {
-        const form = document.querySelector('.contactForm');
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); // Impede o envio real do formulário
-
-            let isValid = true;
-
-            //validation of the name
-            const name = document.getElementById('name');
-            if (name.value.trim().length < 2) {
-                name.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                name.classList.remove('is-invalid');
-            }
-
-            // e-mail validation
-            const email = document.getElementById('email');
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email.value)) {
-                email.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                email.classList.remove('is-invalid');
-            }
-
-            // phone number validation
-            const phone = document.getElementById('phone');
-            const phonePattern = /^\d{9}$/;
-            if (!phonePattern.test(phone.value)) {
-                phone.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                phone.classList.remove('is-invalid');
-            }
-
-            // message validation
-            const message = document.getElementById('message');
-            if (message.value.trim().length < 10) {
-                message.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                message.classList.remove('is-invalid');
-            }
-
-            if (isValid) {
-                // send the form
-                alert("Message submitted successfully!");
-                form.reset();
-            }
-        });
+  };
+  
+  // Validação do formulário de contato
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+  
+    if (path.endsWith("contactus.html") || path === "/contactus.html") {
+      const form = document.querySelector(".contactForm");
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        let isValid = true;
+  
+        const name = document.getElementById("name");
+        if (name.value.trim().length < 2) {
+          name.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          name.classList.remove("is-invalid");
+        }
+  
+        const email = document.getElementById("email");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+          email.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          email.classList.remove("is-invalid");
+        }
+  
+        const phone = document.getElementById("phone");
+        const phonePattern = /^\d{9}$/;
+        if (!phonePattern.test(phone.value)) {
+          phone.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          phone.classList.remove("is-invalid");
+        }
+  
+        const message = document.getElementById("message");
+        if (message.value.trim().length < 10) {
+          message.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          message.classList.remove("is-invalid");
+        }
+  
+        if (isValid) {
+          alert("Message submitted successfully!");
+          form.reset();
+        }
+      });
     }
-});
+  });
+  
