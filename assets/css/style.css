@@ -527,7 +527,6 @@ left: 50%;
 
 .Ourproducts .card-title {
   font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
@@ -757,7 +756,7 @@ cursor: pointer;
 
 .popover {
 background-color: var(--accent);
-border: 2px solid --card-background;
+border: 2px solid var(--card-background);
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0,0,0,0.2);
 opacity: 0.9;
@@ -931,7 +930,6 @@ filter: blur(0.5px);
   color: rgb(221, 203, 203);
   height: 18%;
   width: 100%;
-  text-wrap: inital;
   text-align: center;
   align-content: center;
   padding: 20px;
@@ -968,7 +966,6 @@ filter: blur(0.5px);
   max-height: 35%;
   flex-direction: column;
   text-align: center;
-  align-items: left;
   border-radius: 20px;
   margin: 0 0 0 0;
   padding: 20px;
@@ -1522,7 +1519,7 @@ color: var(--accent);
   max-height: 100%;
 }
 .history-text p {
-  font-size: (1rem, 2.5vw, 2rem)
+  font-size: clamp(1rem, 2.5vw, 2rem);
 }
 
 .body-team {
