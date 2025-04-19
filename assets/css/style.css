@@ -781,21 +781,21 @@ text-align: center;
 .instruction-text:nth-child(1) {
 position: relative;
 filter: grayscale(1);
-background-image: url(/assets/images/table-window.jpg);
+background-image: url(../images/table-window.jpg);
 background-size: cover;
 }
 
 .instruction-text:nth-child(2) {
 position: relative;
 filter: grayscale(1);
-background-image: url(/assets/images/three-shots.jpg);
+background-image: url(../images/three-shots.jpg);
 background-size: cover;
 }
 
 .instruction-text:nth-child(3) {
 position: relative;
 filter: grayscale(1);
-background-image: url(/assets/images/coffee-friends.jpg);
+background-image: url(../images/coffee-friends.jpg);
 background-size: cover;
 }
 
@@ -972,7 +972,7 @@ filter: blur(0.5px);
   border-radius: 20px;
   margin: 0 0 0 0;
   padding: 20px;
-  background-image: url(/assets/images/coffee-banner-2.jpg);
+  background-image: url(../images/coffee-banner-2.jpg);
   background-size: cover;
   background-position: center;
   transition: background-size 5s ease-in-out;
