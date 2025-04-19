@@ -8,7 +8,7 @@ window.onload = function () {
         name = prompt("For a personalized experience on our website, please enter your name:");
         if (name && name.trim() !== "") {
           name = name.trim();
-          localStorage.setItem("userName", name);
+          localStorage.setItem("userName", name); // Salva o nome localmente
         }
       }
   
@@ -19,7 +19,7 @@ window.onload = function () {
         }
       }
   
-      // CAROUSEL
+      // CARROSSEL
       let currentSlide = 0;
       const slides = document.querySelectorAll(".home-slide");
       const previousBtn = document.getElementById("previousBtn");
@@ -44,12 +44,12 @@ window.onload = function () {
       if (nextBtn && previousBtn && slides.length > 0) {
         nextBtn.addEventListener("click", moveSlideNext);
         previousBtn.addEventListener("click", moveSlidePrevious);
-        showSlide(currentSlide); // It shows the first picture for the slide
+        showSlide(currentSlide); // Mostrar o primeiro slide ao carregar
       }
     }
   };
   
-  // Form validation
+  // Validação do formulário de contato
   document.addEventListener("DOMContentLoaded", function () {
     const path = window.location.pathname;
   
